@@ -2,6 +2,7 @@
   "name": "vue3-ant-design",
   "version": "0.0.0",
   "scripts": {
+    "cz": "npx git-cz",
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview"
@@ -10,10 +11,38 @@
     "vue": "^3.0.5"
   },
   "devDependencies": {
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.2",
+    "@typescript-eslint/eslint-plugin": "^3.10.1",
+    "@typescript-eslint/parser": "^3.10.1",
     "@vitejs/plugin-vue": "^1.2.1",
     "@vue/compiler-sfc": "^3.0.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.7.0",
+    "eslint-plugin-vue": "^7.0.0-beta.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.13",
     "typescript": "^4.1.3",
     "vite": "^2.1.5",
     "vue-tsc": "^0.0.24"
-  }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": "eslint --fix"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }
