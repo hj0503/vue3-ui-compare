@@ -1,4 +1,5 @@
 import { App } from 'vue'
+import 'element-plus/lib/theme-chalk/index.css'
 import {
   ElAlert,
   ElAside,
