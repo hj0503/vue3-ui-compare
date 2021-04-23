@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import router from '@/router'
 import App from './App.vue'
 
 import { useElementPlus } from '@/plugins/element-plus'
@@ -6,5 +7,5 @@ import { useElementPlus } from '@/plugins/element-plus'
 const app = createApp(App)
 
 useElementPlus(app)
-
+app.use(router)
 app.mount('#app')
