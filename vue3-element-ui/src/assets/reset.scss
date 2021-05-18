@@ -86,3 +86,8 @@ select,
 textarea {
   font-size: 100%;
 }
+
+body {
+  font-size: var(--font-size-primary);
+  color: var(--font-color-primary);
+}
