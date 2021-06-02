@@ -2,11 +2,10 @@ import { createApp } from 'vue'
 import router from '@/router'
 import App from './App.vue'
 import '@/assets/style.scss'
-
-import { useElementPlus } from '@/plugins/element-plus'
+import usePlugins from '@/plugins/index'
 
 const app = createApp(App)
 
-useElementPlus(app)
+usePlugins(app)
 app.use(router)
 app.mount('#app')

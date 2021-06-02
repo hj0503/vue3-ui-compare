@@ -175,7 +175,7 @@ const plugins = [
   ElNotification,
 ]
 
-export const useElementPlus = (app: App) => {
+export const useElementPlus = (app: App): void => {
   components.forEach(component => {
     app.component(component.name, component)
   })
