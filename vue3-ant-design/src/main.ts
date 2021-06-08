@@ -2,10 +2,9 @@ import { createApp } from 'vue'
 import router from '@/router'
 import App from './App.vue'
 import '@/assets/style.scss'
-
-import { useAntDesign } from '@/plugins/ant-design'
+import usePlugins from '@/plugins/index'
 
 const app = createApp(App)
-useAntDesign(app)
+usePlugins(app)
 app.use(router)
 app.mount('#app')
